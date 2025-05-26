@@ -17,7 +17,7 @@ use App\Http\Controllers\Frontend\CommentController;
 |
 */
 
-Route::get('/admin/dashboard', [HomeController::class, 'index'])->name('home');
+//Backend
 Route::get('/admin/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('/admin/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('/admin/posts', [PostController::class, 'store'])->name('posts.store');
@@ -28,7 +28,8 @@ Route::delete('/admin/posts/{post}', [PostController::class, 'destroy'])->name('
 Route::get('/admin/comments', [CommentController::class, 'index'])->name('comments.index');
 
 
-Route::get('/', [PageController::class, 'index'])->name('front.home');
+//Frontend
+Route::get('/home', [PageController::class, 'index'])->name('front.home');
 Route::get('/posts/{id}', [PageController::class, 'show'])->name('post.show');
 
 Route::post('/posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
