@@ -1,6 +1,9 @@
 @extends('frontend.layouts.app')
 @section('title', 'Blog Posts')
 @section('content')
+    @if($posts->count() > 0)
+        <a href="{{ route('posts.index') }}" class="btn btn-primary btn-lg px-4 mb-4">Admin Dashboard</a>
+    @endif
   <div class="row g-4">
     @forelse ($posts as $post)
       <div class="col-md-4">
@@ -29,7 +32,11 @@
         </div>
       </div>
     @empty
-      <p>No Posts</p>
+    <div class="d-flex flex-column justify-content-center align-items-center vh-100 bg-light text-center">
+      <h2 class="mb-2">No Posts Available</h2>
+      <p class="text-muted mb-4">It looks like there’s nothing here yet. Be the first to create a post!</p>
+      <a href="{{ route('posts.index') }}" class="btn btn-primary btn-lg px-4">Create New Post</a>
+    </div>
     @endforelse
   </div>
 @endsection

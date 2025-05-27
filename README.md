@@ -38,6 +38,6 @@ DB_PASSWORD=
 ```
 Admin_POST_LISTS=http://127.0.0.1:8000/admin/posts
 Admin_COMMENT_LISTS=http://127.0.0.1:8000/admin/comments
-Front_HOME_PAGE=http://127.0.0.1:8000/home
+Front_HOME_PAGE=http://127.0.0.1:8000
 Front_POST_DETAIL=http://127.0.0.1:8000/posts/{post_id}
 ```

@@ -29,7 +29,7 @@ Route::get('/admin/comments', [CommentController::class, 'index'])->name('commen
 
 
 //Frontend
-Route::get('/home', [PageController::class, 'index'])->name('front.home');
+Route::get('/', [PageController::class, 'index'])->name('front.home');
 Route::get('/posts/{id}', [PageController::class, 'show'])->name('post.show');
 
 Route::post('/posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');

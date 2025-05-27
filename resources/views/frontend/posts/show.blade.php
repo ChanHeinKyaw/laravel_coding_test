@@ -2,6 +2,9 @@
 @section('title', $post->title)
 
 @section('content')
+  @if($post)
+    <a href="{{ route('posts.index') }}" class="btn btn-primary btn-lg px-4 mb-4">Admin Dashboard</a>
+  @endif 
 <div class="container py-4">
   <h1 class="mb-4">{{ $post->title }}</h1>
   @php
